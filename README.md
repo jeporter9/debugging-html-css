@@ -1,75 +1,59 @@
-# Debugging Assignment Files
+# Debugging Results
 
-Welcome to the Debugging Assignment repository! This repository contains the resources for the debugging assignment in the Web Design Tools course. Students will debug the provided HTML and CSS files to meet W3C standards and accessibility guidelines.
+## HTML Errors and Warnings
 
-## Files Included
+- Warning: This document appears to be written in English. Consider adding lang="en" (or variant) to the html start tag.
+<!-- <html> -->
+<html lang="en">
 
-1. **index.html**
-   - Contains intentional errors for students to identify and fix.
-   - Errors include issues with HTML syntax, structure, accessibility, and semantic correctness.
+- Error: Element meta is missing one or more of the following attributes: charset, content, http-equiv, itemprop, name, property.
+<!-- <meta> -->
+<meta charset="UTF-8">
 
-2. **style.css**
-   - Includes intentional errors related to CSS syntax, selectors, and properties.
+- Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-3. **Expected Site Design**
-   - Includes a screenshot of the error-free page (`images/expected-site-design.png`) to serve as a reference for students.
+- Error: An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
+-- Also, the image path wasn't properly set so it wasn't loading.
+<!-- <img src="easter-bunny-150-profile.png"> -->
+<img src="..\images\easter-bunny-150-profile.png" alt="easter bunny">
 
-### File Structure
-```
-debugging-html-css/
-├── css/
-│   ├── style.css
-│   ├── layout.css
-├── images/
-│   ├── easter-bunny-150-profile.png
-│   ├── expected-site-design.png
-├── index.html
-├── README.md
-```
+- Error: Element p not allowed as child of element h3 in this context. (Suppressing further errors from this subtree.)
+-- Element h3 is missing its closing tag, causing this error.
+<!-- <h3>Enough Content
+          <p>You need enough content to thoroghly populate your page. The content should cause the page to be long
+            enough to need to scroll. Keep copy/pasting content from Wikipedia until you have enough content to scroll.
+            You will use this page later to embellish it with styles, color, formatting and layouts.</p> -->
+<h3>Enough Content</h3>
+<p>You need enough content to thoroghly populate your page. The content should cause the page to be long enough to need to scroll. Keep copy/pasting content from Wikipedia until you have enough content to scroll. You will use this page later to embellish it with styles, color, formatting and layouts.</p>
 
-## Objective
+- <!-- Closing body tag is/was missing -->
+</body>  <!-- added by JP -->
+</html>
 
-The goal of this assignment is to:
-- Develop debugging skills by identifying and correcting errors in HTML and CSS.
-- Improve familiarity with W3C standards and accessibility best practices.
-- Practice using debugging tools and validators to ensure standards-compliant code.
-- Learn to document errors and resolutions in a structured manner.
 
-## Instructions
+## CSS Errors and Warnings
+### style.css
+- 33 	footer 	Value Error : color #B2 is not a valid color 3 or 6 hexadecimals numbers : #B2 
+/* color: #B2; */ 
+color: #B2B2B2;
 
-1. **Clone this repository** to your local machine:
-   ```bash
-   git clone <repository-url>
-   ```
+- 43 	h1 	Value Error : font-size Too many values or values are not recognized : 5 vw 
+-- There should no space between the 5 and the vw.
+/* font-size: 5 vw; */
+font-size: 5vw;
+	
 
-2. Open the `index.html` and `style.css` files in your favorite text editor or IDE (e.g., Visual Studio Code).
+- 66 	p 	Value Error : line-height Unknown dimension 1.35me (corrected: 1.35em)
+/* line-height: 1.35me; */
+line-height: 1.35em;
 
-3. Identify the errors in both files. Use tools like:
-   - [W3C HTML Validator](https://validator.w3.org/)
-   - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-   - [Wave Accessibility Checker](https://wave.webaim.org/)
 
-4. Resolve all identified errors in the `index.html` and `style.css` files by:
-   - Commenting out the original error code.
-   - Adding the corrected code directly below the commented-out error code.
+- 88 	.error 	Value Error : color #FE27122 is not a valid color 3 or 6 hexadecimals numbers : #FE27122 
+/* color: #FE27122; */
+color: #FE2712;
 
-5. Once all errors are corrected:
-   - Commit your changes and push them to your own GitHub repository.
-   - Deploy the corrected project to GitHub Pages.
-
-6. Submit your GitHub repository link and GitHub Pages link as instructed in the course.
-
-## Tools and Resources
-
-- [W3C HTML Validator](https://validator.w3.org/)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-- [Wave Accessibility Checker](https://wave.webaim.org/)
-- [MDN Web Docs](https://developer.mozilla.org/)
-
-## License
-
-This repository is for educational purposes only. All content is copyrighted by the course instructor and may not be distributed without permission.
-
----
-
-Happy debugging!
+- 97 	a:hover 	Value Error : text-decoration all is not a text-decoration value : all 
+/* text-decoration: all; */
+text-decoration: none;

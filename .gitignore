@@ -2,3 +2,6 @@
 archive/
 errors.md
 .vscode/
+
+# Ignore _README.md
+_README.md 
