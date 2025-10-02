@@ -74,3 +74,44 @@ color: #FE2712;
 - 97 	a:hover 	Value Error : text-decoration all is not a text-decoration value : all 
 /* text-decoration: all; */
 text-decoration: none;
+
+### layout.css
+
+- (False positive) Sorry! We found the following errors (1)
+URI : TextArea
+33	aside	Parse Error dt { font-weight: bold; } dd { padding: 0 10px; }
+
+/* aside {
+  position: relative;
+  padding: 8px 16px;
+  margin: 0;
+  width: 20vw;
+  height: auto;
+  float: right;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    padding: 0 10px;
+  }
+} */
+
+aside {
+  position: relative;
+  padding: 8px 16px;
+  margin: 0;
+  width: 20vw;
+  height: auto;
+  float: right;
+}
+
+aside>dt {
+  font-weight: bold;
+}
+
+aside>dd {
+  padding: 0 10px;
+}
+

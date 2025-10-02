@@ -16,7 +16,7 @@ main {
   background-color: whitesmoke;
 }
 
-aside {
+/* aside {
   position: relative;
   padding: 8px 16px;
   margin: 0;
@@ -31,6 +31,23 @@ aside {
   dd {
     padding: 0 10px;
   }
+} */
+
+aside {
+  position: relative;
+  padding: 8px 16px;
+  margin: 0;
+  width: 20vw;
+  height: auto;
+  float: right;
+}
+
+aside>dt {
+  font-weight: bold;
+}
+
+aside>dd {
+  padding: 0 10px;
 }
 
 footer {
