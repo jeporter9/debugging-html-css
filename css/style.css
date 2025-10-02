@@ -31,7 +31,7 @@ footer {
 	text-align: center;
 	background-color: #092834;
 	/* color: #B2; */
-	color: #B2B2B2;
+	color: #B2D732;
 	clear: both;
 }
 
@@ -96,7 +96,7 @@ a {
 a:hover {
 	color: #2E6C85;
 	/* text-decoration: all; */
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 a:visited {
